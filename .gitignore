@@ -1,0 +1,8 @@
+# Server & temporary
+server.ps1
+start-server.bat
+*.log
+
+# Editor & OS files
+.DS_Store
+Thumbs.db

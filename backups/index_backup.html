@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>До встречи с нашим малышом</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="screen-wrapper">
+    <main class="mobile-frame" id="appFrame">
+      <!-- Фоновое изображение по сроку беременности -->
+      <div class="bg-layer" id="bgLayer"></div>
+
+      <!-- Контейнер с элементами интерфейса -->
+      <div class="content-container">
+        <!-- Верхний заголовок: анимация быстрой печати слева направо -->
+        <header class="header-section">
+          <div class="type-reveal-line" style="--delay: 0.1s; --duration: 0.75s;">
+            <div class="title-line-1">ДО ВСТРЕЧИ</div>
+          </div>
+          <div class="type-reveal-line" style="--delay: 0.35s; --duration: 0.85s;">
+            <div class="title-line-2">С НАШИМ МАЛЫШОМ</div>
+          </div>
+        </header>
+
+        <!-- Число оставшихся дней: динамические барабаны для каждого разряда (вплоть до 1 -> 0) -->
+        <section class="counter-section">
+          <div class="counter-number-wrap">
+            <svg class="counter-svg" viewBox="0 0 380 210" id="counterSvg">
+              <defs>
+                <linearGradient id="numGrad" x1="100%" y1="0%" x2="0%" y2="0%">
+                  <stop offset="0%" stop-color="#387EBD" />
+                  <stop offset="24%" stop-color="#8786BF" />
+                  <stop offset="48%" stop-color="#AD7DA6" />
+                  <stop offset="78%" stop-color="#D8796D" />
+                  <stop offset="100%" stop-color="#FCB380" />
+                </linearGradient>
+                <filter id="numShadow" x="-20%" y="-20%" width="150%" height="150%">
+                  <feDropShadow dx="4" dy="4" stdDeviation="5" flood-color="#FFFFFF" flood-opacity="1" />
+                </filter>
+              </defs>
+
+              <!-- Динамическая группа цифр с идеальными межзнаковыми интервалами -->
+              <g id="svgDigitsContainer" filter="url(#numShadow)"></g>
+            </svg>
+          </div>
+          
+          <div class="type-reveal-line" style="--delay: 0.65s; --duration: 0.75s;">
+            <p class="counter-label">ДНЕЙ ОСТАЛОСЬ ДО РОДОВ</p>
+          </div>
+          <div class="counter-divider"></div>
+        </section>
+
+        <!-- Примерная дата рождения -->
+        <section class="due-date-section">
+          <div class="type-reveal-line" style="--delay: 0.85s; --duration: 0.75s;">
+            <div class="due-date-label">ПРИМЕРНАЯ ДАТА РОЖДЕНИЯ</div>
+          </div>
+          <div class="type-reveal-line" style="--delay: 1.05s; --duration: 0.65s;">
+            <div class="due-date-value">15 июня 2027</div>
+          </div>
+        </section>
+
+        <!-- Плашки знаков: градиентная обводка + плавный сдвиг влево на 10px -->
+        <section class="badges-row anim-badge-left">
+          <!-- Знак Близнецы -->
+          <div class="glass-badge badge-left">
+            <div class="badge-icon-wrap">
+              <img src="images/gemini.png" alt="Близнецы" class="badge-img badge-img-gemini">
+            </div>
+            <div class="badge-sub">ПО ГОРОСКОПУ</div>
+            <div class="badge-name">Близнецы</div>
+          </div>
+
+          <!-- Знак Коза -->
+          <div class="glass-badge badge-right">
+            <div class="badge-icon-wrap">
+              <img src="images/goat.png" alt="Козы" class="badge-img badge-img-goat">
+            </div>
+            <div class="badge-sub">РОДИТСЯ В ГОД</div>
+            <div class="badge-name">Козы</div>
+          </div>
+        </section>
+
+        <!-- Анимированные капельки: увеличены на 30% -->
+        <div class="drops-container">
+          <!-- Капелька 1: верхняя левая возле Близнецов (анимация 15px) -->
+          <img src="images/drop_2.png" alt="" class="drop drop-1 anim-15px">
+
+          <!-- Капелька 2: центральная между Близнецами и Козой (анимация 15px) -->
+          <img src="images/drop_1.png" alt="" class="drop drop-2 anim-15px">
+
+          <!-- Капелька 3: правая возле сферы справа (анимация 15px) -->
+          <img src="images/drop_2.png" alt="" class="drop drop-3 anim-15px">
+
+          <!-- Капелька 4: большая нижняя левая (анимация 10px) -->
+          <img src="images/drop_4.png" alt="" class="drop drop-4 anim-10px">
+
+          <!-- Капелька 5: нижняя правая жемчужина (анимация 10px) -->
+          <img src="images/drop_5.png" alt="" class="drop drop-5 anim-10px">
+        </div>
+
+        <!-- Нижний слоган: анимация печати текста -->
+        <footer class="footer-section">
+          <div class="type-reveal-line" style="--delay: 1.25s; --duration: 0.85s;">
+            <p class="footer-text">СКОРО МЫ ВСТРЕТИМСЯ</p>
+          </div>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
