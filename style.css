@@ -161,7 +161,7 @@ html, body {
 
 .svg-counter-text {
   font-family: 'Manrope', sans-serif;
-  font-size: 200px;
+  font-size: 160px;
   font-weight: 800;
   fill: url(#numGrad);
   stroke: rgba(79, 43, 44, 0.32);
