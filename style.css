@@ -471,7 +471,7 @@ html, body {
    ========================================================================== */
 @media (max-height: 700px) {
   .header-section { top: 3%; }
-  .counter-section { top: 11%; }
+  .counter-section { top: 8%; }
   .due-date-section { top: 40%; }
   .badges-row { top: 43.5%; padding: 0 10px; }
   .glass-badge { width: 114px; height: 114px; }
