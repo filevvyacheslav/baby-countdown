@@ -211,7 +211,7 @@ html, body {
    ========================================================================== */
 .due-date-section {
   position: absolute;
-  top: 37.8%;
+  top: 40%;
   left: 0;
   width: 100%;
   display: flex;
@@ -472,7 +472,7 @@ html, body {
 @media (max-height: 700px) {
   .header-section { top: 3%; }
   .counter-section { top: 11%; }
-  .due-date-section { top: 42%; }
+  .due-date-section { top: 40%; }
   .badges-row { top: 43.5%; padding: 0 10px; }
   .glass-badge { width: 114px; height: 114px; }
   .footer-section { bottom: 3.5%; }
