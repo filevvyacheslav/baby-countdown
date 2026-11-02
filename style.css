@@ -147,7 +147,7 @@ html, body {
 .counter-number-wrap {
   width: 100%;
   max-width: 380px;
-  height: 175px;
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
